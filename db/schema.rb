@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_07_204747) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_07_210236) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "voter_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_07_204747) do
   create_table "votes", force: :cascade do |t|
     t.integer "voter_id"
     t.integer "event_id"
-    t.string "day"
+    t.date "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

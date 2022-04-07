@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_07_210236) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_07_210758) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -23,7 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_07_210236) do
 
   create_table "voters", force: :cascade do |t|
     t.string "name"
-    t.string "vote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "event_id"

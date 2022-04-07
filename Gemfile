@@ -73,3 +73,5 @@ end
 
 gem "rspec", "~> 3.11"
 gem "rspec-rails", "~> 5.1"
+
+gem "shoulda-matchers", "~> 5.1"

@@ -1,6 +1,6 @@
-class EventController < ApplicationController
+class EventsController < ApplicationController
   def new
-    @event = Event.build
+    @event = Event.new
   end
 
   def create

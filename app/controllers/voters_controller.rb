@@ -1,4 +1,4 @@
-class VoterController < ApplicationController
+class VotersController < ApplicationController
   before_action :load_event
 
   def new

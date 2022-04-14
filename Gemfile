@@ -75,3 +75,11 @@ gem "rspec", "~> 3.11"
 gem "rspec-rails", "~> 5.1"
 
 gem "shoulda-matchers", "~> 5.1"
+
+gem "cssbundling-rails", "~> 1.1"
+
+gem "guard", "~> 2.18"
+
+gem "guard-livereload", "~> 2.5"
+
+gem "bulma-extensions-rails", "~> 6.2"

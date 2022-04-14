@@ -1,4 +1,4 @@
-<div class="section">
+<section class="section">
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-half">
@@ -24,6 +24,8 @@
 
         </div>
     </div>
-    <%= render :partial => "voters/new", :object => @voter %>
-
-</div>
+    <div class="columns is-centered">
+        <%= render :partial => "voters/new", :object => @voter %>
+        <%= render :partial => "votes/new", :object => @vote %>
+    </div>
+</section>

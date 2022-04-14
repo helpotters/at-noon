@@ -9,8 +9,10 @@
                     </div>
                     <div class="card-content">
                         <p><%= @event.description %></p>
+                    </div>
+                    <div class="card-footer">
                         <% @event.voters.each do |voter| %>
-                            <article class="media-object">
+                            <article class="media-object card-footer-item">
                                 <%= voter.name %>
                                 <div class="media-content level">
                                 </div>

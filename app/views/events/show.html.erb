@@ -1,2 +1,27 @@
-<h1>Event#show</h1>
-<p>Find me in app/views/event/show.html.erb</p>
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <div class="card">
+                    <div class="card-header level">
+                        <h1 class="card-header-title"><%= @event.title %></h1>
+                        <%= @event.start_date %> till <%= @event.end_date %>
+                    </div>
+                    <div class="card-content">
+                        <p><%= @event.description %></p>
+                        <% @event.voters.each do |voter| %>
+                            <article class="media-object">
+                                <%= voter.name %>
+                                <div class="media-content level">
+                                </div>
+                            </article>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <%= render :partial => "voters/new", :object => @voter %>
+
+</div>

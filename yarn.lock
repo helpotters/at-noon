@@ -27,11 +27,6 @@ braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bulma-extensions@^6.2.7:
-  version "6.2.7"
-  resolved "https://registry.yarnpkg.com/bulma-extensions/-/bulma-extensions-6.2.7.tgz#f9f4d1478a7ac1606ae8db1e765aa45e3f12bb31"
-  integrity sha512-y3dHsxlCYkuxUg87KKN9H4InM8NCk8tdnrlxLkYak8sd2WQdllg3wP2Nv41lj8X46uPXX2ADP0MO65LlXPHt/Q==
-
 bulma@^0.9.3:
   version "0.9.3"
   resolved "https://registry.npmjs.org/bulma/-/bulma-0.9.3.tgz"

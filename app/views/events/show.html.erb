@@ -30,7 +30,6 @@
         </div>
     </div>
     <div class="columns is-centered">
-        <%= render :partial => "voters/new", :object => @voter %>
-        <%= render :partial => "votes/new", :object => @vote %>
+            <%= render :partial => "voters/new", :object => @voter, locals: {event: @event} %>
     </div>
 </section>

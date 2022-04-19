@@ -1,5 +1,9 @@
 <div class="column form-group is-3">
     <%= form_with model: @vote do |f| %>
+        <%= month_calendar() do |date| %>
+            <%= date %>
+        <% end %>
+
         <div class="field">
             <div class="control">
                 <%= f.label :day, class: "label" %>

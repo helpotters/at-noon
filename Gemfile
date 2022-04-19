@@ -83,3 +83,5 @@ gem "guard", "~> 2.18"
 gem "guard-livereload", "~> 2.5"
 
 gem "bulma-extensions-rails", "~> 6.2"
+
+gem "simple_calendar", "~> 2.4"

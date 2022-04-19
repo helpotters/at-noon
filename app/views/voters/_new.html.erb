@@ -24,7 +24,7 @@
                         <%= f.fields_for :vote do |vote_form|  %>
                             <%= calendar(events: @event.days, number_of_days: @event.days.count) do |date| %>
                                 <%= date.day %>
-                                <button class="button is-info" type="button">CSS Hell</button>
+                                <%= image_tag("dog.jpg", :alt => "rss feed") %>
                             <% end %>
                         <% end %>
                     </div>

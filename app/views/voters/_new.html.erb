@@ -21,10 +21,12 @@
                 </header>
                 <div class="modal-card-body container is-fluid">
                     <div class="columns is-centered">
-                        <%= f.fields_for :vote do |vote_form|  %>
+                        <%= f.fields_for "votes_attributes[]", Vote.new  do |vote_form|  %>
                             <%= calendar(events: @event.days, number_of_days: @event.days.count) do |date| %>
-                                <%= date.day %>
-                                <%= image_tag("dog.jpg", :alt => "rss feed") %>
+                                <%= vote_form.check_box :_destroy, value: 1, checked: "checked", type: "button", onclick: "this.value=0; this.classList.add('is-danger')", class: "button is-primary" %>
+                                <%= vote_form.hidden_field :day, value: date %>
+                                <%= vote_form.hidden_field :voter_id %>
+                                <%= date %>
                             <% end %>
                         <% end %>
                     </div>
@@ -40,7 +42,6 @@
         </button>
     <% end %>
 </div>
-
     </br>
     <script type="text/javascript">
      document.addEventListener('DOMContentLoaded', () => {
@@ -78,6 +79,10 @@
                  closeModal($target);
              });
          });
+         let toggles = document.querySelectorAll('.toggle');
+         toggles.forEach( toggle => {
+             toggle.addEventListener('click', () => toggleRSVP())
+         } )
 
          // Add a keyboard event to close all modals
          document.addEventListener('keydown', (event) => {

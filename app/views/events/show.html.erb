@@ -19,6 +19,10 @@
                         <% @event.voters.each do |voter| %>
                             <article class="media-object card-footer-item">
                                 <span class="tag"><%= voter.name %></span>
+                                <span class="tag"><%= voter.votes.count %></span>
+                                <% voter.votes.each do |vote| %>
+                                    <%= vote.day.strftime("%A").to_s.chr %>
+                                <% end %>
                                 <div class="media-content is-centered">
                                 </div>
                             </article>
@@ -30,6 +34,6 @@
         </div>
     </div>
     <div class="columns is-centered">
-            <%= render :partial => "voters/new", :object => @voter, locals: {event: @event} %>
+        <%= render :partial => "voters/new", :object => @voter, locals: {event: @event} %>
     </div>
 </section>

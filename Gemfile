@@ -87,3 +87,5 @@ gem "bulma-extensions-rails", "~> 6.2"
 gem "simple_calendar", "~> 2.4"
 
 gem "better_errors", "~> 2.9"
+
+gem "pg", "~> 1.3"

@@ -20,3 +20,4 @@ production:
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: at_noon_database_production
+  url: <%= ENV["DATABASE_URL'] %>

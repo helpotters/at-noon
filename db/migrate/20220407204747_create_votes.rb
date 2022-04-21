@@ -3,7 +3,7 @@ class CreateVotes < ActiveRecord::Migration[7.0]
     create_table :votes do |t|
       t.integer :voter_id
       t.integer :event_id
-      t.text :day
+      t.date :day
 
       t.timestamps
     end

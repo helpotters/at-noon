@@ -9,7 +9,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to event_url(@event.id), notice: 'Event created!' }
+        format.html { redirect_to event_url(@event.id), notice: 'Event created!', turbolinks: false }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

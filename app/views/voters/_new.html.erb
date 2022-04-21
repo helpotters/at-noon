@@ -23,7 +23,7 @@
                     <div class="columns is-centered">
                         <%= f.fields_for "votes_attributes[]", Vote.new  do |vote_form|  %>
                             <%= calendar(events: @event.days, number_of_days: @event.days.count) do |date| %>
-                                <%= vote_form.check_box :_destroy, value: 1, checked: "checked", type: "button", onclick: "this.value=0; this.classList.add('is-danger');this.parentNode.classList('is-danger);", class: "button is-primary" %>
+                                <%= vote_form.check_box :_destroy, value: 1, checked: "checked", type: "button", onclick: "this.value=0; this.classList.add('is-danger');this.parentNode.classList.add('is-danger);", class: "button is-primary" %>
                                 <%= vote_form.hidden_field :day, value: date %>
                                 <%= vote_form.hidden_field :voter_id %>
                                 <%= date %>

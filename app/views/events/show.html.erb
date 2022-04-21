@@ -21,7 +21,7 @@
                                 <span class="tag"><%= voter.name %></span>
                                 <span class="tag"><%= voter.votes.count %></span>
                                 <% voter.votes.each do |vote| %>
-                                    <%= vote.day.strftime("%A").to_s.chr %>
+                                    <%= vote.day.strftime("%a").to_s %>
                                 <% end %>
                                 <div class="media-content is-centered">
                                 </div>
